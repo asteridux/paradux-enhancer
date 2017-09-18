@@ -1,0 +1,43 @@
+{
+  "name": "paradux-enhancer",
+  "version": "1.0.0",
+  "description": "Redux enhancer for dynamic/async reducer loading",
+  "main": "./build/lib.js",
+  "scripts": {
+    "release:init": "standard-version --first-release",
+    "release": "standard-version",
+    "prepublish": "npm run build",
+    "build": "webpack",
+    "watch:build": "webpack --watch",
+    "prebuild:rollup": "rimraf build && mkdri build",
+    "build:rollup": "rollup --config",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asteridux/paradux-enhancer.git"
+  },
+  "author": "Antonin Januska <antonin@antjanus.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asteridux/paradux-enhancer/issues"
+  },
+  "homepage": "https://github.com/asteridux/paradux-enhancer#readme",
+  "devDependencies": {
+    "babel-core": "6.26.0",
+    "babel-jest": "21.0.2",
+    "babel-loader": "7.1.2",
+    "babel-preset-env": "1.6.0",
+    "jest": "21.1.0",
+    "rimraf": "2.6.2",
+    "rollup-plugin-babel": "3.0.2",
+    "standard-version": "4.2.0",
+    "webpack": "3.6.0"
+  },
+  "jest": {
+    "bail": true,
+    "collectCoverage": true,
+    "verbose": true
+  }
+}
