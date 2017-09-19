@@ -7,10 +7,9 @@
     "release:init": "standard-version --first-release",
     "release": "standard-version",
     "prepublish": "npm run build",
-    "build": "webpack",
-    "watch:build": "webpack --watch",
-    "prebuild:rollup": "rimraf build && mkdri build",
-    "build:rollup": "rollup --config",
+    "prebuild": "rimraf build && mkdir build",
+    "build": "rollup --config",
+    "watch:build": "rollup -c -w",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -25,6 +24,7 @@
   },
   "homepage": "https://github.com/asteridux/paradux-enhancer#readme",
   "devDependencies": {
+    "alterdux": "1.0.3",
     "babel-core": "6.26.0",
     "babel-jest": "21.0.2",
     "babel-loader": "7.1.2",
