@@ -2,14 +2,16 @@ import { paraduxEnhancer } from '../index';
 
 // lightweight redux alternative with identical API
 import alterdux from 'alterdux'
-import utils from 'utils'
+import skorice from 'skorice';
 
 describe('Core functionality test', () => {
 
   it('should return a store with an enhanced API', () => {
     const store = alterdux.createStore(state => state, {}, paraduxEnhancer)
 
-    utils.checkKeys(store, ['addReducer', 'removeReducer'])
+    const storeTemplate = {}
+
+    expect(skorice.assertLike(storeTemplate, store)).toBeTruthy()
   })
 
 })

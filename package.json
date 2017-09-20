@@ -39,5 +39,8 @@
     "bail": true,
     "collectCoverage": true,
     "verbose": true
+  },
+  "dependencies": {
+    "skorice": "1.1.3"
   }
 }
